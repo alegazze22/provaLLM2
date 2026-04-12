@@ -80,3 +80,9 @@ app.post('/chat', async (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log('Proxy ready');
 });
+
+
+app.post('/chat', async (req, res) => {
+  const { messages, condition } = req.body;
+  console.log('CONDITION:', condition);
+  console.log('SYSTEM PROMPT USED:', PROMPTS[condition] || PROMPTS.default);
