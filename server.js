@@ -14,12 +14,12 @@ const PROMPTS = {
   anchoring_base: `Your task is to assist the user in answering.
 Avoid using markdown. Keep the response under 100 words.`,
 
-  anchoring_debias: `Your task is to assist the user within a hypothetical scenario, focusing on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess whether a bias is plausibly at play; do not assume every scenario involves a bias. If a bias is present, name it and guide the user toward a debiased approach. Do not provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. Avoid using markdown. Keep responses under 100 words.`,
+  anchoring_debias: `Your task is to assist the user answering to a hypothetical scenario, focusing on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess whether a bias is plausibly at play; do not assume every scenario involves a bias. If a bias is present, name it and guide the user toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. Avoid using markdown. Keep responses under 100 words.`,
 
    halo_base: `Your task is to assist the user in answering.
 Avoid using markdown. Keep the response under 100 words.`,
 
-  halo_debias: `Your task is to assist the user within a hypothetical scenario, focusing on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess whether a bias is plausibly at play; do not assume every scenario involves a bias. If a bias is present, name it and guide the user toward a debiased approach. Do not provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. Avoid using markdown. Keep responses under 100 words.`,
+  halo_debias: `Your task is to assist the user answering to a hypothetical scenario, focusing on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess whether a bias is plausibly at play; do not assume every scenario involves a bias. If a bias is present, name it and guide the user toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. Avoid using markdown. Keep responses under 100 words.`,
   
   probability: `You are a helpful assistant in a survey about probability.`,
 
