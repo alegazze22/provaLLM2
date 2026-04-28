@@ -11,7 +11,7 @@ app.use(express.json());
 // ─────────────────────────────────────────────
 const PROMPTS = {
 
-  anchoring_base: `Your task is to assist the user in answering. NO markdown. Responses <70`,
+  anchoring_base: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. NO markdown. Responses <70`,
 
   anchoring_debias: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. Focus on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess if a bias is at play; do not assume every scenario involves a bias. If you detect a bias, name it and guide the user step-by-step toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. NO markdown. Responses <70 words.`,
 
@@ -26,7 +26,7 @@ Avoid using markdown. Keep the response under 100 words.`,
 
   debias: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. Focus on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess if a bias is at play; do not assume every scenario involves a bias. If you detect a bias, name it and guide the user step-by-step toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. NO markdown. Responses <70 words.`,
 
-  base: `Your task is to assist the user in answering. NO markdown. Responses <70`,
+  base: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. NO markdown. Responses <70`,
     
   default: `You are a helpful assistant. NO markdown. Responses <70 words`
 };
