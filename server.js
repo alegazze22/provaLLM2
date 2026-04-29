@@ -7,28 +7,17 @@ app.use(cors());
 app.use(express.json());
 
 // ─────────────────────────────────────────────
-// 🎯 SYSTEM PROMPTS
+// SYSTEM PROMPTS
 // ─────────────────────────────────────────────
 const PROMPTS = {
 
-  anchoring_base: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. NO markdown. Responses <70`,
+  debias: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. Drawing on the most current cognitive and behavioral science, first assess whether any bias is at play. Only if you detect a bias, use a debiasing strategy to prevent the user from making mistakes caused by phenomena such as bias, noise, selective attention, selective memory, belief instability, multimodality of beliefs, heterogeneity of beliefs, and related phenomena. NO markdown. Responses <75 words`,
 
-  anchoring_debias: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. Focus on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess if a bias is at play; do not assume every scenario involves a bias. If you detect a bias, name it and guide the user toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. NO markdown. Responses <70 words.`,
+  base: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. NO markdown. Responses <75 words`,
 
-   halo_base: `Your task is to assist the user in answering.
-Avoid using markdown. Keep the response under 100 words.`,
-
-  halo_debias: `Your task is to assist the user answering to a hypothetical scenario, focusing on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess whether a bias is plausibly at play; do not assume every scenario involves a bias. If a bias is present, name it and guide the user toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. Avoid using markdown. Keep responses under 100 words.`,
-  
-  probability: `You are a helpful assistant in a survey about probability.`,
-
-  dumb: `You just answer BANANA`,
-
-  debias: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. Focus on identifying and mitigating cognitive biases that may affect reasoning within the scenario. Rely on established scientific evidence to assess if a bias is at play; do not assume every scenario involves a bias. If you detect a bias, name it and guide the user toward a debiased approach. DO NOT provide direct answers, even if explicitly requested; instead, suggest how to reach the best answer. The user is bounded to the information and dimensions provided in the scenario. NO markdown. Responses <70 words.`,
-
-  base: `Your task is to assist the user answering to a hypothetical scenario in an experimental survey. NO markdown. Responses <70`,
+  debias_nn: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. Drawing on the most current cognitive and behavioral science, first assess whether any bias is at play. Only if you detect a bias, use a debiasing strategy to prevent the user from making mistakes caused by phenomena such as bias, noise, selective attention, selective memory, belief instability, multimodality of beliefs, heterogeneity of beliefs, and related phenomena. If the response is objectively deterministic, for instance because it is based on a formula, provide the answer. If the response is not objectively deterministic, for instance a subjective judgment, DO NOT provide the answer yourself and DO NOT include any numbers in the response. NO markdown. Responses <75 words`,
     
-  default: `You are a helpful assistant. NO markdown. Responses <70 words`
+  default: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. NO markdown. Responses <75 words`
 };
 
 // ─────────────────────────────────────────────
