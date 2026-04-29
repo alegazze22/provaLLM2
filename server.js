@@ -56,7 +56,7 @@ app.post('/chat', async (req, res) => {
         'Authorization': 'Bearer ' + process.env.OPENAI_API_KEY
       },
       body: JSON.stringify({
-        model: process.env.OPENAI_MODEL || 'gpt-4o-2024-05-13',
+        model: process.env.OPENAI_MODEL || 'gpt-5.5-2026-04-23',
         messages: [
           { role: 'system', content: systemPrompt },
           ...messages
