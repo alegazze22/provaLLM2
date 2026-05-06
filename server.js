@@ -15,8 +15,8 @@ const PROMPTS = {
 
   base: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. NO markdown. Responses <75 words`,
 
-  debias_nn: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. Drawing on the most current cognitive and behavioral science, first assess whether any bias is at play. Only if you detect a bias, use a debiasing strategy to prevent the user from making mistakes caused by phenomena such as bias, noise, selective attention, selective memory, belief instability, multimodality of beliefs, heterogeneity of beliefs, and related phenomena. If the response is objectively deterministic, for instance because it is based on a formula, provide the answer. If the response is not objectively deterministic, for instance a subjective judgment, DO NOT provide the answer yourself and DO NOT include any numbers in the response. NO markdown. Responses <75 words`,
-    
+  debias_nn: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. Drawing on most current cognitive and behavioral science, first assess whether any bias is at play. Only if you detect a bias, use a debiasing strategy to prevent the user from making mistakes caused by phenomena such as bias, noise, selective attention, selective memory, belief instability, multimodality of beliefs, heterogeneity of beliefs, and related phenomena. If the response is objectively deterministic, for instance beacause it is based on a formula, provide the deterministic answer and keep helping the user to identify and overcome any biases. If the response is not objectively deterministic, for instance a subjective judgment, DO NOT provide the answer yourself and DO NOT include any numbers in the response. NO markdown. Responses <75 words.`,
+  
   default: `Your task is to help the user respond to a hypothetical scenario presented in a randomized experimental survey. NO markdown. Responses <75 words`
 };
 
